@@ -1,4 +1,4 @@
-# 🛡️ Seguridad Arauco — Sistema de Registro de Visitas y Checklists  
+# Seguridad Arauco — Sistema de Registro de Visitas y Checklists  
 Proyecto académico — Programación Backend — INACAP  
 
 Este proyecto es un sistema web desarrollado con **Python + Django + MariaDB**, enfocado en el **registro de visitas de seguridad y checklists operacionales** en el contexto de la empresa forestal **Arauco**.
@@ -7,7 +7,7 @@ El objetivo es permitir que supervisores registren visitas en terreno, generen c
 
 ---
 
-# 📂 1. Tecnologías utilizadas
+# 1. Tecnologías utilizadas
 - **Python 3.12+**
 - **Django 5.2**
 - **MariaDB 10+ / MySQL compatible**
@@ -19,7 +19,7 @@ El objetivo es permitir que supervisores registren visitas en terreno, generen c
 
 ---
 
-# 📁 2. Estructura del proyecto
+# 2. Estructura del proyecto
 
 ```
 SeguridadArauco/
@@ -40,7 +40,7 @@ SeguridadArauco/
 
 ---
 
-# 🔐 3. Variables de entorno (.env)
+# 3. Variables de entorno (.env)
 
 Debe estar en la raíz del proyecto:
 
@@ -57,9 +57,9 @@ DEBUG=True
 
 ---
 
-# 🛠️ 4. Instalación del proyecto (PASO A PASO)
+# 4. Instalación del proyecto (PASO A PASO)
 
-## ✔ Paso 1 — Clonar proyecto o descomprimir carpeta
+## Paso 1 — Clonar proyecto o descomprimir carpeta
 
 ```
 git clone https://github.com/CristianAlejandroMunoz/SeguridadArauco.git
@@ -68,7 +68,7 @@ cd SeguridadArauco
 
 ---
 
-## ✔ Paso 2 — Crear entorno virtual
+## Paso 2 — Crear entorno virtual
 
 ```
 python -m venv .venv
@@ -88,7 +88,7 @@ source .venv/bin/activate
 
 ---
 
-## ✔ Paso 3 — Instalar dependencias
+## Paso 3 — Instalar dependencias
 
 ```
 pip install -r requirements.txt
@@ -96,7 +96,7 @@ pip install -r requirements.txt
 
 ---
 
-## ✔ Paso 4 — Configurar la base de datos MariaDB
+## Paso 4 — Configurar la base de datos MariaDB
 
 Entrar al cliente MariaDB:
 
@@ -112,7 +112,7 @@ CREATE DATABASE arauco_seguridad CHARACTER SET utf8mb4;
 
 ---
 
-## ✔ Paso 5 — Aplicar migraciones
+## Paso 5 — Aplicar migraciones
 
 ```
 python manage.py makemigrations
@@ -121,7 +121,7 @@ python manage.py migrate
 
 ---
 
-## ✔ Paso 6 — Crear superusuario
+## Paso 6 — Crear superusuario
 
 ```
 python manage.py createsuperuser
@@ -135,7 +135,7 @@ Recomendación para pruebas:
 
 ---
 
-## ✔ Paso 7 — Cargar datos de prueba (fixtures)
+## Paso 7 — Cargar datos de prueba (fixtures)
 
 ```
 python manage.py loaddata visitas.json
@@ -150,7 +150,7 @@ visitas/fixtures/
 
 ---
 
-## ✔ Paso 8 — Ejecutar el servidor
+## Paso 8 — Ejecutar el servidor
 
 ```
 python manage.py runserver
@@ -164,33 +164,33 @@ http://127.0.0.1:8000/
 
 ---
 
-# 🖥️ 5. Funcionalidades Principales
+# 5. Funcionalidades Principales
 
-## ✔ Registro de visitas  
+## Registro de visitas  
 - Crear visita  
 - Editar visita  
 - Ver detalle  
 - Eliminar visita  
 - Listado completo  
 
-## ✔ Checklist por visita  
+## Checklist por visita  
 - Crear checklist asociado  
 - Editar checklist  
 - Eliminar checklist  
 
-## ✔ Autenticación  
+## Autenticación  
 - Login / Logout  
 - Protección con LoginRequired  
 - Panel de administración  
 
-## ✔ Admin panel avanzado  
+## Admin panel avanzado  
 ```
 http://127.0.0.1:8000/admin/
 ```
 
 ---
 
-# 🧪 6. Pruebas automatizadas
+# 6. Pruebas automatizadas
 
 Para ejecutar los tests:
 
@@ -206,7 +206,7 @@ python manage.py test visitas
 
 ---
 
-# 📜 7. Comandos principales y su explicación
+# 7. Comandos principales y su explicación
 
 | Comando | Explicación |
 |--------|-------------|
@@ -220,7 +220,7 @@ python manage.py test visitas
 
 ---
 
-# 📝 8. Lista de dependencias (archivo requirements.txt)
+# 8. Lista de dependencias (archivo requirements.txt)
 
 Incluye:
 
@@ -234,7 +234,7 @@ Este archivo se incluye abajo y debe ir en la raíz del proyecto.
 
 ---
 
-# ✔ 9. Autor
+# 9. Autor
 
 Proyecto desarrollado para la asignatura:  
 **Programación Backend — INACAP**  
@@ -243,7 +243,7 @@ Estudiante: *Cristian Muñoz Mora*
 
 ---
 
-# 🎯 10. Objetivo educativo
+# 10. Objetivo educativo
 
 Este proyecto cumple los requisitos de la rúbrica:
 
