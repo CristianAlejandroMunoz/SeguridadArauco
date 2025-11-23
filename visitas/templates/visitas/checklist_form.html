@@ -1,0 +1,11 @@
+<!-- templates/visitas/checklist_form.html -->
+{% extends "visitas/base.html" %}
+{% block content %}
+  <h3>Checklist para visita {{ visita.fecha }} - {{ visita.zona }}</h3>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary">Guardar item</button>
+    <a class="btn btn-secondary" href="{% url 'visitas:detalle_visita' visita.pk %}">Volver</a>
+  </form>
+{% endblock %}

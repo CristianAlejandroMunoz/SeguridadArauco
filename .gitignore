@@ -1,0 +1,14 @@
+# Entorno virtual
+.venv/
+env/
+venv/
+
+# Archivos de Django
+__pycache__/
+*.pyc
+
+# Configuración secreta
+.env
+
+# Archivos del sistema
+.DS_Store

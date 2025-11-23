@@ -1,0 +1,45 @@
+<!-- templates/visitas/visita_list.html -->
+{% extends "visitas/base.html" %}
+{% block title %}Visitas{% endblock %}
+{% block content %}
+<h2>Visitas de Seguridad</h2>
+<a class="btn btn-success mb-3" href="{% url 'visitas:crear_visita' %}">Nueva visita</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Fecha</th><th>Supervisor</th><th>Zona</th><th>Estado</th><th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for visita in visitas %}
+      <tr>
+        <td>{{ visita.fecha }}</td>
+        <td>{{ visita.supervisor }}</td>
+        <td>{{ visita.zona }}</td>
+        <td>{{ visita.estado }}</td>
+        <td>
+          <a class="btn btn-sm btn-primary" href="{% url 'visitas:detalle_visita' visita.pk %}">Ver</a>
+          <a class="btn btn-sm btn-warning" href="{% url 'visitas:editar_visita' visita.pk %}">Editar</a>
+          <a class="btn btn-sm btn-danger" href="{% url 'visitas:borrar_visita' visita.pk %}">Borrar</a>
+        </td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="5">No hay visitas registradas.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<nav aria-label="Page navigation">
+  {% if is_paginated %}
+    <ul class="pagination">
+      {% if page_obj.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Anterior</a></li>
+      {% endif %}
+      <li class="page-item active"><span class="page-link">{{ page_obj.number }}</span></li>
+      {% if page_obj.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Siguiente</a></li>
+      {% endif %}
+    </ul>
+  {% endif %}
+</nav>
+{% endblock %}

@@ -1,0 +1,24 @@
+[
+    {
+        "model": "visitas.visita",
+        "pk": 1,
+        "fields": {
+            "fecha": "2025-01-01",
+            "supervisor": "Juan Pérez",
+            "zona": "Planta Horcones",
+            "observaciones": "Revisión completa de seguridad.",
+            "estado": "completa"
+        }
+    },
+    {
+        "model": "visitas.visita",
+        "pk": 2,
+        "fields": {
+            "fecha": "2025-01-05",
+            "supervisor": "María Soto",
+            "zona": "Faena Norte",
+            "observaciones": "Checklist parcial en área de cosecha.",
+            "estado": "pendiente"
+        }
+    }
+]

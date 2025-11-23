@@ -1,0 +1,10 @@
+<!-- usuarios/templates/registration/login.html -->
+{% extends "visitas/base.html" %}
+{% block content %}
+  <h2>Iniciar sesión</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">Entrar</button>
+  </form>
+{% endblock %}

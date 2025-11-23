@@ -1,0 +1,33 @@
+<!-- templates/visitas/visita_detail.html -->
+{% extends "visitas/base.html" %}
+{% block title %}Detalle visita{% endblock %}
+{% block content %}
+<h2>Visita: {{ visita.fecha }} - {{ visita.zona }}</h2>
+
+<p><strong>Supervisor:</strong> {{ visita.supervisor }}</p>
+<p><strong>Tipo:</strong> {{ visita.tipo_operacion }}</p>
+<p><strong>Estado:</strong> {{ visita.estado }}</p>
+<p><strong>Observaciones:</strong> {{ visita.observaciones }}</p>
+
+<hr>
+<h4>Checklist</h4>
+<a class="btn btn-sm btn-success mb-2" href="{% url 'visitas:checklist_crear' visita.pk %}">Agregar item</a>
+<table class="table">
+  <thead><tr><th>Item</th><th>Cumplido</th><th>Nivel</th><th>Acciones</th></tr></thead>
+  <tbody>
+    {% for item in visita.checklists.all %}
+      <tr>
+        <td>{{ item.item }}</td>
+        <td>{{ item.cumplido }}</td>
+        <td>{{ item.nivel_riesgo }}</td>
+        <td>
+          <a class="btn btn-sm btn-warning" href="{% url 'visitas:checklist_editar' item.pk %}">Editar</a>
+          <a class="btn btn-sm btn-danger" href="{% url 'visitas:checklist_borrar' item.pk %}">Borrar</a>
+        </td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="4">No hay items.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

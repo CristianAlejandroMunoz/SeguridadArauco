@@ -1,0 +1,24 @@
+[
+    {
+        "model": "visitas.checklist",
+        "pk": 1,
+        "fields": {
+            "visita": 1,
+            "item": "Uso correcto de EPP",
+            "cumplido": true,
+            "comentario": "Todo en orden.",
+            "nivel_riesgo": "bajo"
+        }
+    },
+    {
+        "model": "visitas.checklist",
+        "pk": 2,
+        "fields": {
+            "visita": 2,
+            "item": "Zona de troncos limpia",
+            "cumplido": false,
+            "comentario": "Acumulación detectada.",
+            "nivel_riesgo": "alto"
+        }
+    }
+]
